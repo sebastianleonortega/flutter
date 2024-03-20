@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static final List<Widget> _menu = [
     const RecetaScreen(),
-    const BebidaScreen()
+    BebidaScreen()
   ];
 
   @override
@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Hola Aplicacion'),
         backgroundColor: Colors.black,
+        
       ),
       body: _menu[_indicador],
       drawer: Drawer(

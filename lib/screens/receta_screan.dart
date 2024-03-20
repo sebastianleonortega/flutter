@@ -5,6 +5,29 @@ class RecetaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('hola receta');
+    return const DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.vaccines),
+              ),
+              Tab(
+                icon: Icon(Icons.cabin_sharp),
+              ),
+              Tab(
+                icon: Icon(Icons.sixteen_mp_sharp),
+              )
+            ],
+          ),
+          body: TabBarView(
+            children: [
+              Icon(Icons.vaccines),
+              Icon(Icons.cabin_sharp),
+              Icon(Icons.sixteen_mp_sharp)
+            ],
+          ),
+        ));
   }
 }
