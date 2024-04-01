@@ -48,15 +48,23 @@ class _BebidaScreenState extends State<BebidaScreen> {
                 ),
               );
             },
+
             child: Column(
               children: [
                 Container(
+                  margin: EdgeInsets.all(10),
                   child: Row(
                     children: [
-                      ClipRect(
-                        child: Image.network(
-                          items![index]["strDrinkThumb"],
-                          width: size.width * 0.2,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10.0), 
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0), 
+                          ),
+                          child: Image.network(
+                            items![index]["strDrinkThumb"],
+                            width: size.width * 0.2,
+                          ),
                         ),
                       ),
                       SizedBox(width: 20,),
